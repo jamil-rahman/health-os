@@ -1,11 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
-
+import './Navbar.css';
 
 function Navbar({ isSearchBar }) {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light px-4 py-3 shadow-sm">
+      <nav className="navbar navbar-expand-lg navbar-dark custom-nav px-4 py-3 shadow-sm">
         <div className="container-fluid">
           <a className="navbar-brand fw-bold fs-4" href="#">
             Mano Super Market
@@ -58,8 +57,8 @@ function Navbar({ isSearchBar }) {
                 </button>
               </form>
               )}
-            <div>
-              <a href="" className="btn btn-custom">
+            <div className="nav-buttons">
+              <a href="" className="btn btn-warning">
               <i class="fa fa-book me-1"></i>Pending Orders (0)
               </a>
             </div>

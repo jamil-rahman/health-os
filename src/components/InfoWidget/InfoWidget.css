@@ -1,0 +1,24 @@
+.overview-item{
+    flex: 1;
+    margin: 0px 20px;
+    padding: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+}
+.overview-title{
+    font-size: 1.2rem;
+}
+.overview-details{
+    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+}
+.overview-value{
+    font-size: 2rem;
+    font-weight: 600;
+}
+.overview-subtext{
+    font-size: 18px;
+}
