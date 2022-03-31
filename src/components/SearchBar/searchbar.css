@@ -1,0 +1,20 @@
+.search-form {
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .search-bar {
+    width: 50%;
+    border: none;
+    padding: 10px;
+    border-radius: 2%;
+    transition: transform 0.1s ease-out;
+    border: 1.5px solid grey;
+  }
+  .search-bar:focus{
+    outline: 0;
+    transform: scale(1.02);
+    border: 1px solid grey;
+  }

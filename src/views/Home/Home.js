@@ -2,9 +2,12 @@ import Chart from '../../components/Charts/Chart';
 import InfoWidget from '../../components/InfoWidget/InfoWidget';
 import './Home.css';
 import {storeData} from '../../dummyData'
+import Navbar from '../../components/Navbar/Navbar';
 
 function Home() {
   return (
+    <>
+    <Navbar isSearchBar={false} />
     <div className='home'>
         <h3 className='heading'>Oveview</h3>
         <div className='widgets'>
@@ -14,6 +17,7 @@ function Home() {
         </div>
     <Chart data={storeData} title='Store Visits Analysis' isGrid={true} dataKey="Store Views" xAxis="month"/>
     </div>
+    </>
   )
 }
 

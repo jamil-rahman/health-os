@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import './Navbar.css';
+import "./Navbar.css";
 
-function Navbar({ isSearchBar }) {
+function Navbar({ isSearchBar, placeholder }) {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark custom-nav px-4 py-3 shadow-sm">
@@ -23,7 +23,7 @@ function Navbar({ isSearchBar }) {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+                <a className="nav-link" href="#">
                   Home
                 </a>
               </li>
@@ -42,24 +42,24 @@ function Navbar({ isSearchBar }) {
                   Payments
                 </a>
               </li>
-
             </ul>
-                            {/* render my searchbar based on the prop status */}
-                            { isSearchBar && (<form className="d-flex">
+            {/* render my searchbar based on the prop status */}
+            {isSearchBar && (
+              <form className="d-flex">
                 <input
                   className="form-control me-2"
                   type="search"
-                  placeholder="Search"
+                  placeholder={placeholder}
                   aria-label="Search"
                 />
-                <button class="btn btn-outline-success" type="submit">
-                  Search
+                <button type="button" class="btn-custom btn-success">
+                  <i class="fa fa-search"></i>
                 </button>
               </form>
-              )}
+            )}
             <div className="nav-buttons">
               <a href="" className="btn btn-warning">
-              <i class="fa fa-book me-1"></i>Pending Orders (0)
+                <i class="fa fa-book me-1"></i>Pending Orders (0)
               </a>
             </div>
           </div>
