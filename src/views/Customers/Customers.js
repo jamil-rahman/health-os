@@ -44,7 +44,7 @@ export default function Customers() {
 
   return (
     <>
-      <Navbar isSearchBar={true} placeholder="Search by Name"/>
+      <Navbar placeholder="Search by Name"/>
       <SearchBar placeholder={'Search by Customer Names'} />
       <Grid container spacing={2}>
           {users.map((user) => (

@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import "./Navbar.css";
 
-function Navbar({ isSearchBar, placeholder }) {
+function Navbar() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark custom-nav px-4 py-3 shadow-sm">
@@ -44,19 +44,6 @@ function Navbar({ isSearchBar, placeholder }) {
               </li>
             </ul>
             {/* render my searchbar based on the prop status */}
-            {isSearchBar && (
-              <form className="d-flex">
-                <input
-                  className="form-control me-2"
-                  type="search"
-                  placeholder={placeholder}
-                  aria-label="Search"
-                />
-                <button type="button" class="btn-custom btn-success">
-                  <i class="fa fa-search"></i>
-                </button>
-              </form>
-            )}
             <div className="nav-buttons">
               <a href="" className="btn btn-warning">
                 <i class="fa fa-book me-1"></i>Pending Orders (0)
