@@ -1,12 +1,14 @@
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Home from './views/Home/Home';
-import Customers from './views/Customers/Customers';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Home from "./views/Home/Home";
+import Customers from "./views/Customers/Customers";
+import Products from "./views/Products/Products";
 function App() {
   return (
     <div className="App">
-     {/* <Home /> */}
-     <Customers />
+      {/* <Home /> */}
+      {/* <Customers /> */}
+      <Products />
     </div>
   );
 }

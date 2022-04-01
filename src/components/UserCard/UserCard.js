@@ -16,7 +16,7 @@ export default function UserCard({initials, fullName, numberOfOrders}) {
           <h2 className="name"> 
           {fullName}
             </h2>
-            <p className="my-4">
+            <p className="mx-auto text-muted">
               Order : {numberOfOrders}
             </p>
         </div>

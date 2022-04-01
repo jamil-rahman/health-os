@@ -13,7 +13,7 @@ export default function Customers() {
   const getUsers = async () =>{
     const res = await fetch('https://jsonplaceholder.typicode.com/users');
     const data = await res.json();
-    console.log(data);
+    // console.log(data);
     setUsers(data);
   }
  
@@ -44,7 +44,7 @@ export default function Customers() {
 
   return (
     <>
-      <Navbar placeholder="Search by Name"/>
+      <Navbar />
       <SearchBar placeholder={'Search by Customer Names'} />
       <Grid container spacing={2}>
           {users.map((user) => (
