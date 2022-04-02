@@ -19,7 +19,7 @@ export default function Product() {
 
   useEffect(() => {
     getProduct();
-  },[]);
+  }, []);
 
   return (
     <div className="product-page">

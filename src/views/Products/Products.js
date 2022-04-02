@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import LoadingSpinner from "../../components/LoadingSpinner/LoadingSpinner";
 import ProductCatalogue from "../../components/Product Catalogue/ProductCatalogue";
-import './products.css';
+import "./products.css";
 
 export default function Products() {
   const [products, setProducts] = useState([]);
@@ -25,7 +25,7 @@ export default function Products() {
 
   useEffect(() => {
     getProducts();
-  },[]);
+  }, []);
 
   return (
     <div className="products">

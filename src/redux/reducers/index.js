@@ -2,7 +2,7 @@ import handleList from "./handleList";
 import { combineReducers } from "redux";
 
 const rootReducers = combineReducers({
-    handleList
-})
+  handleList,
+});
 
 export default rootReducers;

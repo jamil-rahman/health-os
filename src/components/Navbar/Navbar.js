@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 function Navbar() {
-  const state = useSelector((state)=>state.handleList)
+  const state = useSelector((state) => state.handleList);
   console.log(state.length);
   return (
     <div>
@@ -41,13 +41,7 @@ function Navbar() {
                   Products
                 </NavLink>
               </li>
-              {/* <li className="nav-item">
-                <NavLink className="nav-link" to="/payments">
-                  Payments
-                </NavLink>
-              </li> */}
             </ul>
-            {/* render my searchbar based on the prop status */}
             <div className="nav-buttons">
               <NavLink to="/orders" className="btn btn-warning">
                 <i class="fa fa-book me-1"></i>Pending Orders ({state.length})
