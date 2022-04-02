@@ -5,9 +5,12 @@ import ProductCatalogue from "../../components/Product Catalogue/ProductCatalogu
 
 export default function Products() {
   const [products, setProducts] = useState([]);
-  const [filter, setFilter] = useState(products);
   const [loading, setLoading] = useState(false);
+ 
   let componentRender = true;
+
+
+ 
 
   const getProducts = async () => {
     setLoading(true);
@@ -15,9 +18,9 @@ export default function Products() {
     // const data = await res.json();
     if (componentRender) {
       setProducts(await res.clone().json());
-      setFilter(await res.json());
+     // setFilter(await res.json());
       setLoading(false);
-      console.log(filter);
+      //console.log(filter);
       console.log(products);
     }
     return () => {
@@ -45,7 +48,7 @@ export default function Products() {
               {loading ? (
                 <LoadingSpinner />
               ) : (
-                <ProductCatalogue filter={filter} />
+                <ProductCatalogue products={products} />
               )}
           </div>
         </div>
