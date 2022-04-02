@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import LoadingSpinner from "../../components/LoadingSpinner/LoadingSpinner";
-import Navbar from "../../components/Navbar/Navbar";
 import ProductCatalogue from "../../components/Product Catalogue/ProductCatalogue";
+import './products.css';
 
 export default function Products() {
   const [products, setProducts] = useState([]);
@@ -25,11 +25,10 @@ export default function Products() {
 
   useEffect(() => {
     getProducts();
-  }, []);
+  },[]);
 
   return (
-    <div>
-      {/* <Navbar /> */}
+    <div className="products">
       <div className="container py-2">
         <div className="row">
           <div className="col-md-12 mb-5">
