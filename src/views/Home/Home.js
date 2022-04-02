@@ -7,7 +7,7 @@ import Navbar from '../../components/Navbar/Navbar';
 function Home() {
   return (
     <>
-    <Navbar isSearchBar={false} />
+    {/* <Navbar /> */}
     <div className='home'>
         <h3 className='heading'>Oveview</h3>
         <div className='widgets'>

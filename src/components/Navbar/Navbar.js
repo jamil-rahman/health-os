@@ -1,14 +1,15 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import "./Navbar.css";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark custom-nav px-4 py-3 shadow-sm">
         <div className="container-fluid">
-          <a className="navbar-brand fw-bold fs-4" href="#">
+          <NavLink to="/" className="navbar-brand fw-bold fs-4" href="#">
             Mano Super Market
-          </a>
+          </NavLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -23,31 +24,31 @@ function Navbar() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <NavLink className="nav-link" to="/">
                   Home
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <NavLink className="nav-link" to="/customers">
                   Customers
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <NavLink className="nav-link" to="/products">
                   Products
-                </a>
+                </NavLink>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
+              {/* <li className="nav-item">
+                <NavLink className="nav-link" to="/payments">
                   Payments
-                </a>
-              </li>
+                </NavLink>
+              </li> */}
             </ul>
             {/* render my searchbar based on the prop status */}
             <div className="nav-buttons">
-              <a href="" className="btn btn-warning">
+              <NavLink to="/pending" className="btn btn-warning">
                 <i class="fa fa-book me-1"></i>Pending Orders (0)
-              </a>
+              </NavLink>
             </div>
           </div>
         </div>

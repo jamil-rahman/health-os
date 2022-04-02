@@ -7,6 +7,8 @@ export default function ProductCatalogue({ products, stockStatus }) {
 
   
 
+  //from the passed down prop of my parent component, set filter state as product list so that 
+  //product can be filtered in according to their cateogry which is already defined in the api
 
   const filterProducts = (category) => {
     const updatedCatalogue = products.filter((product)=>product.category === category);
