@@ -1,8 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function Navbar() {
+  const state = useSelector((state)=>state.handleList)
+  console.log(state.length);
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark custom-nav px-4 py-3 shadow-sm">
@@ -46,8 +49,8 @@ function Navbar() {
             </ul>
             {/* render my searchbar based on the prop status */}
             <div className="nav-buttons">
-              <NavLink to="/pending" className="btn btn-warning">
-                <i class="fa fa-book me-1"></i>Pending Orders (0)
+              <NavLink to="/orders" className="btn btn-warning">
+                <i class="fa fa-book me-1"></i>Pending Orders ({state.length})
               </NavLink>
             </div>
           </div>
