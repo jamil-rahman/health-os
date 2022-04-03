@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import UserCard from "../../components/UserCard/UserCard";
 import Grid from "@material-ui/core/Grid";
 import SearchBar from "../../components/SearchBar/SearchBar";
+import Navbar from "../../components/Navbar/Navbar";
 
 export default function Customers() {
   const [users, setUsers] = useState([]);
@@ -39,6 +40,7 @@ export default function Customers() {
 
   return (
     <>
+      <Navbar />
       <SearchBar placeholder={"Search by Customer Names"} />
       <Grid container spacing={2}>
         {users.map((user) => (

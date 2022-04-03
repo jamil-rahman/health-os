@@ -10,7 +10,7 @@ function Navbar() {
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark custom-nav px-4 py-3 shadow-sm">
         <div className="container-fluid">
-          <NavLink to="/" className="navbar-brand fw-bold fs-4" href="#">
+          <NavLink to="/home" className="navbar-brand fw-bold fs-4" href="#">
             Mano Super Market
           </NavLink>
           <button

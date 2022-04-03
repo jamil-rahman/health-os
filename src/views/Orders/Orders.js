@@ -5,9 +5,10 @@ import { deleteProduct } from "../../redux/action";
 import { NavLink } from "react-router-dom";
 import { addProduct } from "../../redux/action";
 import "./orders.css";
+import Navbar from "../../components/Navbar/Navbar";
 
 const Orders = () => {
-  //TODO Refactor to make reusable code
+  //TODO Refactor to make reusable code and checkout component and auth
   const state = useSelector((state) => state.handleList);
   const dispatch = useDispatch();
 
@@ -19,6 +20,9 @@ const Orders = () => {
     dispatch(addProduct(product));
   };
 
+  //Three Small components, that would render based on condition
+
+  //render the list of products chosen
   const listItems = (listItem) => {
     return (
       <div>
@@ -59,6 +63,7 @@ const Orders = () => {
     );
   };
 
+  //render if the list is empty
   const emptyList = () => {
     return (
       <div className="orders">
@@ -73,27 +78,26 @@ const Orders = () => {
     );
   };
 
+  //button component for confirmation
   const button = () => {
     return (
       <div className="container">
-        <div className="row">
-          <NavLink
-            to="/checkout"
-            className="btn btn-outline-success mb-5 w-25 mx-auto"
-          >
-            Confirm Order
-          </NavLink>
-        </div>
+        <div className="row">Confirm Order</div>
       </div>
     );
   };
 
+  //main render that would render the other small components
+  //based on the condition
   return (
-    <div className="orders">
-      {state.length === 0 && emptyList()}
-      {state.length !== 0 && state.map(listItems)}
-      {state.length !== 0 && button()}
-    </div>
+    <>
+      <Navbar />
+      <div className="orders">
+        {state.length === 0 && emptyList()}
+        {state.length !== 0 && state.map(listItems)}
+        {state.length !== 0 && button()}
+      </div>
+    </>
   );
 };
 

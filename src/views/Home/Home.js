@@ -2,10 +2,12 @@ import Chart from "../../components/Charts/Chart";
 import InfoWidget from "../../components/InfoWidget/InfoWidget";
 import "./Home.css";
 import { storeData } from "../../dummyData";
+import Navbar from "../../components/Navbar/Navbar";
 
 function Home() {
   return (
     <>
+      <Navbar />
       <div className="home">
         <h3 className="heading">Oveview</h3>
         <div className="widgets">

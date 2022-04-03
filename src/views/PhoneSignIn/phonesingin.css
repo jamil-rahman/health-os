@@ -1,0 +1,22 @@
+.box {
+  border: 1px solid #dfdfdf;
+  background-color: #fff;
+  border-radius: 20px;
+}
+.phone-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  align-items: center;
+  height: 100vh;
+}
+.button-right {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  margin-bottom: 30px;
+}
+#recaptcha-container {
+    margin: 20px;
+  }

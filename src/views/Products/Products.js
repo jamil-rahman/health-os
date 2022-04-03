@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import LoadingSpinner from "../../components/LoadingSpinner/LoadingSpinner";
+import Navbar from "../../components/Navbar/Navbar";
 import ProductCatalogue from "../../components/Product Catalogue/ProductCatalogue";
 import "./products.css";
 
@@ -28,22 +29,25 @@ export default function Products() {
   }, []);
 
   return (
-    <div className="products">
-      <div className="container py-2">
-        <div className="row">
-          <div className="col-md-12 mb-5">
-            <h1 className="display-6 text-center">Products Catalogue</h1>
-            <hr />
+    <>
+      <Navbar />
+      <div className="products">
+        <div className="container py-2">
+          <div className="row">
+            <div className="col-md-12 mb-5">
+              <h1 className="display-6 text-center">Products Catalogue</h1>
+              <hr />
+            </div>
+          </div>
+          <div className="row justify-content-center">
+            {loading ? (
+              <LoadingSpinner />
+            ) : (
+              <ProductCatalogue products={products} />
+            )}
           </div>
         </div>
-        <div className="row justify-content-center">
-          {loading ? (
-            <LoadingSpinner />
-          ) : (
-            <ProductCatalogue products={products} />
-          )}
-        </div>
       </div>
-    </div>
+    </>
   );
 }
