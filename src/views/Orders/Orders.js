@@ -2,7 +2,6 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { deleteProduct } from "../../redux/action";
-import { NavLink } from "react-router-dom";
 import { addProduct } from "../../redux/action";
 import "./orders.css";
 import Navbar from "../../components/Navbar/Navbar";
@@ -82,7 +81,11 @@ const Orders = () => {
   const button = () => {
     return (
       <div className="container">
-        <div className="row">Confirm Order</div>
+        <div className="row ">
+          <div className="btn btn-outline-success mb-5 w-25 mx-auto">
+          Confirm Order
+          </div>
+          </div>
       </div>
     );
   };

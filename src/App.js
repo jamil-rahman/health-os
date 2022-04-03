@@ -11,7 +11,7 @@ import store from "./redux/store/store";
 import LogIn from "./views/LogIn/LogIn";
 import PhoneSignIn from "./views/PhoneSignIn/PhoneSignIn";
 //import { AuthContextProvider } from "./context/AuthContext";
-import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+// import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
@@ -21,15 +21,7 @@ function App() {
           {/* <AuthContextProvider> */}
           <Routes>
             <Route exact path="/" element={<LogIn />} />
-            <Route
-              exact
-              path="/home"
-              element={
-                <PrivateRoute>
-                  <Home />
-                </PrivateRoute>
-              }
-            />
+            <Route exact path="/home" element={<Home />} />
             <Route exact path="/customers" element={<Customers />} />
             <Route exact path="/products" element={<Products />} />
             <Route exact path="/products/:id" element={<Product />} />
