@@ -21,7 +21,7 @@ export function AuthContextProvider({ children }) {
   return (
     <authContext.Provider
       value={{
-        setUpRecaptha,
+        setUpRecaptha
       }}
     >
       {children}

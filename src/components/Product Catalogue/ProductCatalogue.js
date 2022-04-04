@@ -2,8 +2,9 @@ import { Switch } from "@material-ui/core";
 import React, { useState } from "react";
 import "./catalogue.css";
 import { NavLink } from "react-router-dom";
+import NewButton from "../NewButton/NewButton";
 
-export default function ProductCatalogue({ products, stockStatus }) {
+export default function ProductCatalogue({ products}) {
   const [filter, setFilter] = useState(products);
 
   //from the passed down prop of my parent component, set filter state as product list so that
@@ -49,7 +50,9 @@ export default function ProductCatalogue({ products, stockStatus }) {
         >
           Electronic
         </button>
+      
       </div>
+      <NewButton />
       {filter.map((product) => {
         return (
           <>
@@ -66,7 +69,7 @@ export default function ProductCatalogue({ products, stockStatus }) {
                     <h5 className="card-title mb-0">{product.title}</h5>
                     <p className="card-text lead">${product.price}</p>
                     <div className="d-flex justify-content-between">
-                      <span>In Stock: {stockStatus}</span>
+                      <span>In Stock: </span>
                       <Switch color="success" />
                     </div>
                     {/* Redirects to single product page */}

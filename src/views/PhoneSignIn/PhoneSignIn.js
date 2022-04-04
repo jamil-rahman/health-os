@@ -2,7 +2,7 @@ import "./phonesingin.css";
 import "react-phone-number-input/style.css";
 import { Form, Alert, Button } from "react-bootstrap";
 import PhoneInput from "react-phone-number-input";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useUserAuth } from "../../context/AuthContext";
 
@@ -36,11 +36,10 @@ export default function PhoneSignIn() {
     if (otp === "" || otp === null) return;
     try {
       await result.confirm(otp);
-      //on confirmation of otp, should navigate to my homepage
-      //but for reasons unknown, not navigating to home
       navigate("/home");
     } catch (err) {
       setError(err.message);
+      console.log(err);
     }
   };
   return (
@@ -79,7 +78,6 @@ export default function PhoneSignIn() {
           <Form.Group
             className="mb-3"
             controlId="formBasicOtp"
-            onSubmit={verifyOTP}
             style={{ display: flag ? "block" : "none" }}
           >
             <Form.Control
@@ -93,7 +91,9 @@ export default function PhoneSignIn() {
               <Button variant="secondary">Cancel</Button>
             </Link>
             &nbsp;
-            <Button type="submit" variant="success">
+            {/* Had to use onClick because for some reason when using onSubmit,
+            the useNavigate hook was not working and navigating to home page */}
+            <Button type="submit" variant="success" onClick={verifyOTP}>
               Verify
             </Button>
           </div>
