@@ -2,7 +2,7 @@ import "./phonesingin.css";
 import "react-phone-number-input/style.css";
 import { Form, Alert, Button } from "react-bootstrap";
 import PhoneInput from "react-phone-number-input";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useUserAuth } from "../../context/AuthContext";
 
